@@ -25,7 +25,7 @@ geojson = requests.get('https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ba
 #data = list(pymongo.MongoClient(uri)['bohemio']['datos_barrios'].find())
 #df_scores = pd.DataFrame.from_records(data)
 
-df_score = pd.read_csv('datos_final_dash.csv')
+df_scores = pd.read_csv('datos_final_dash.csv')
 df_scores.rename(columns={'area': 'superficie'}, inplace=True)
 df_scores['m2verdes'] =[round(i) for i in df_scores.m2verdes]
 
